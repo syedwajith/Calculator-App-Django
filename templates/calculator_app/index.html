@@ -1,0 +1,36 @@
+{% extends 'calculator_app/base.html' %}
+    {% load static %}
+    {% block head %}
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    {% endblock %}
+
+    {% block content %}
+        <h1>Calculator App</h1>
+        <div class="col">
+            <div class="row">
+                <label>Enter First Number :</label>
+                <input type="text" name="number1">
+                <br>
+                <br>
+                <label>Enter Second Number :</label>
+                <input type="text" name="number2">
+                <br>
+                <br>
+                <label>Choose Operator :</label>
+                <select name="operator">
+                    <option value="+">+</option>
+                    <option value="-">-</option>
+                    <option value="*">*</option>
+                    <option value="/">/</option>
+                    <option value="%">%</option>
+                </select>
+                <br>
+                <br>
+                <input type="button" value="Calculate">
+                <br>
+                <br>
+                <label>Result :</label>
+                <input type="text" name="result" value="">
+            </div>
+        </div>
+    {% endblock %}
